@@ -14,7 +14,11 @@ const CartItemSchema = new mongoose.Schema({
 });
 const CartSchema = new mongoose.Schema(
     {
-        items: [CartItemSchema]
+        items:{
+            type: [CartItemSchema],
+            required: true,
+            default: []
+        }
     },
     { timestamps: true }
 );

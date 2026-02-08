@@ -9,7 +9,7 @@ export const product = () => {
     const productService = new ProcuctService();
 
     router.get("/", AsyncHandler(async (req, res) => {
-        const data = productService.findAll();
+        const data = await productService.findAll();
         res.json(new ApiResponse(200, data, "Success"));
     }));
 

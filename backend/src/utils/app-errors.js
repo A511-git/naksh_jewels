@@ -1,3 +1,5 @@
+import { is } from "zod/v4/locales";
+
 const STATUS_CODES = {
   OK: 200,
   BAD_REQUEST: 400,
@@ -23,9 +25,10 @@ class APIError extends AppError {
   constructor(
     name = "API_ERROR",
     statusCode = STATUS_CODES.INTERNAL_ERROR,
-    description = "Internal Server Error"
+    description = "Internal Server Error",
+    isOperational = true
   ) {
-    super(name, statusCode, description, true);
+    super(name, statusCode, description, isOperational);
   }
 }
 
