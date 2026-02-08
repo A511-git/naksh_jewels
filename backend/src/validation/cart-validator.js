@@ -1,8 +1,8 @@
 import {BaseValidator} from "./base-validator.js"
-import {AlertSchema} from "./schema/index.js"
+import {CartSchema} from "./schema/index.js"
 
 class CartValidator extends BaseValidator {
-    constructor() { super(AlertSchema) }
+    constructor() { super(CartSchema) }
 }
 
 export {CartValidator}
