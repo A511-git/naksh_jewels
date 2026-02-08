@@ -24,7 +24,7 @@ class BaseService {
     }
 
     async findAll(query) {
-        return this.repository.find(query);
+        return this.repository.findAll(query);
     }
 
     async paginate({query, options}) {
