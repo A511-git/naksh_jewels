@@ -1,5 +1,4 @@
-import "./globals.css";
-import { CartProvider } from "../context/cartContext";
+import { CartProvider } from "../context/CartContext";
 
 export const metadata = {
   title: "Mini E-commerce"

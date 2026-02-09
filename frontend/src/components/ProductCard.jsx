@@ -1,8 +1,8 @@
 "use client";
 
-import { useCart } from "@/context/cartContext"
+import { useCart } from "../context/CartContext";
 
-export const ProductCard = () => {
+export const ProductCard = ({product}) => {
     const { addToCart } = useCart();
 
     return (
