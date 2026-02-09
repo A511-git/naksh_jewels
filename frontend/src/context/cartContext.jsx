@@ -29,6 +29,7 @@ export const CartProvider = ({ children }) => {
         });
     };
 
+    // for final backend submission
     const submitCart = async () => {
         const items = Object.entries(cart).map(
             ([product, quantity]) => ({
