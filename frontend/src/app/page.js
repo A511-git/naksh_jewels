@@ -1,20 +1,12 @@
 "use client";
+import { ProductCard } from "@/components/ProductCard";
+import { useProducts } from "@/hooks/useProducts";
 
-import { useEffect, useState } from "react";
-import {api} from "@/lib/axios";
-import {ProductCard} from "@/components/ProductCard";
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
+  const { products, loading } = useProducts();
+  if (loading) return <p className="p-4">Loading…</p>;
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const res = await api.get("/products");
-      setProducts(res.data.data);
-    };
-    fetchProducts();
-  }, []);
-  
   return (
     <main className="max-w-6xl mx-auto p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
