@@ -64,15 +64,21 @@ docker-compose up
 
 ### Steps
 ```bash
-git clone <repository-url>
+git clone https://github.com/A511-git/naksh_jewels
 cd naksh_jewels
+```
+Now change the .env.sample file name to .env only in both /frontend and /backend
+```bash
 docker-compose build
 docker-compose up
 ```
 
+
 ### Access
 - Frontend: http://localhost:3000  
 - Backend API: http://localhost:8000/api/v1
+- MongoDB → running internally with persisted volume
+- Products → auto-seeded (once, no duplicates)
 
 ---
 
