@@ -67,7 +67,7 @@ docker-compose up
 git clone https://github.com/A511-git/naksh_jewels
 cd naksh_jewels
 ```
-Now change the .env.sample file name to .env only in both /frontend and /backend
+Now change the ```.env.sample``` file name to ```.env``` in both /frontend and /backend
 ```bash
 docker-compose build
 docker-compose up
