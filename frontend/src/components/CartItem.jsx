@@ -5,7 +5,7 @@ export const CartItem = ({ product, quantity }) => {
     const { updateQuantity, removeItem } = useCart();
 
     return (
-        <div className="flex justify-between items-center bg-white p-4 mb-3 rounded">
+        <div className="flex justify-between items-center bg-white text-black p-4 mb-3 rounded">
             <div>
                 <h3 className="font-medium">{product.name}</h3>
                 <p>₹{product.price}</p>
